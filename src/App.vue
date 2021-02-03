@@ -1,13 +1,21 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/test">Test</router-link>
+      <router-link to="/">Rechercher</router-link> |
+      <router-link to="/team">Mes pokemons</router-link>
     </div>
   </div>
   <router-view/>
 </template>
-
+<script>
+export default {
+  data(){
+    return{
+    team:[1,2]
+    }
+  }
+}
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

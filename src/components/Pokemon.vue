@@ -1,6 +1,8 @@
 <template>
 
   <img v-bind:src="pokemon['data']['sprites']['front_default']"/>
+  <div>id: {{pokemon['data']['id']}}</div>
+  <div>Nom: {{pokemon['data']['name']}}</div>
 
 </template>
 

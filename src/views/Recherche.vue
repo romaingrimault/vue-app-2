@@ -7,6 +7,7 @@
         <input id="recherche" v-model="this.recherche" type="text" placeholder="nom(en anglais!) ou id">
       </form>
     {{ search }}
+
     <Pokemon v-if="json != 'Not Found' && json != null " v-bind:pokemon="json" />
   </div>
   </div>
@@ -21,13 +22,6 @@ export default {
   name: "Recherche",
   components: {Pokemon},
   el:'#app',
-  /*mounted () {
-    if (this.recherche!=null) {
-      axios
-          .get('https://pokeapi.co/api/v2/pokemon/' + this.recherche)
-          .then(response => (this.json = response))
-    }
-  },*/
   data(){
     return {
       recherche: null,
@@ -37,7 +31,13 @@ export default {
           if (this.recherche != null) {
             axios
                 .get('https://pokeapi.co/api/v2/pokemon/' + this.recherche)
-                .then(response => (this.json = response))
+                .then(
+                    response =>
+                      (this.json = response)
+
+
+                )
+
           }
         }
       }
