@@ -4,16 +4,20 @@
       <router-link to="/">Rechercher</router-link> |
       <router-link to="/team">Mes pokemons</router-link>
     </div>
+
   </div>
   <router-view/>
 </template>
 <script>
+
 export default {
-  data(){
-    return{
-    team:[1,2]
-    }
-  }
+
+created() {
+
+  localStorage.setItem("team",JSON.stringify(["1","2"]))
+}
+
+
 }
 </script>
 <style lang="scss">
@@ -37,4 +41,15 @@ export default {
     }
   }
 }
+.history{
+  position: absolute;
+  border: 1px solid black;
+  width: 300px;
+  height: 300px;
+}
+.history-title{
+  border-bottom: 1px solid black;
+  margin: 5px;
+}
+
 </style>

@@ -5,7 +5,12 @@ const routes = [
   {
     path: '/',
     name: 'Recherche',
-    component: Recherche
+    component: Recherche,
+  },
+  {
+    path: '/:paramSearch',
+    name: 'Rechercheparam',
+    component: Recherche,
   },
   {
     path: '/team',
